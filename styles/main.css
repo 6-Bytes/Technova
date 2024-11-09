@@ -1,0 +1,41 @@
+body{
+
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    background-color: whitesmoke;
+    
+
+}
+
+
+#super{
+
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+
+}
+#super1{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+
+.bar{
+
+    text-align: center;
+    padding: 10px;
+     
+}
+#welcome1{
+    font-size: 40px;
+    color: blueviolet;
+}
+
+
+
+
+
+
+
