@@ -1,0 +1,332 @@
+Front end: 
+
+Home Page done, 07:55 (approx)
+Description 
+
+node installed,
+
+making the AR website,
+
+
+Tech needed: JS (webGL)
+
+
+dependencies
+
+Three.js - For 3D rendering
+AR.js - For AR functionality
+A-Frame - For easy 3D/AR scene creation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Try-On</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="icon" href="assets/images/logo.jpeg">
+    
+    <!-- AR Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.0/dist/mindar-face.prod.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.0/dist/mindar-face-aframe.prod.js"></script>
+</head>
+<body>
+    <div id="super1">
+        <div id="super">
+            <div class="bar" id="welcome1"><p>Welcome !!</p></div>
+        </div>
+    </div>
+    
+    <div id="app">
+        <a-scene mindar-face="autoStart: true;" embedded>
+            <!-- Assets for .glb files -->
+            <a-assets>
+                <a-asset-item id="model" src="assets/models/corn_necklace.glb"></a-asset-item>
+            </a-assets>
+            
+            <!-- Define 3D model entity positioned in AR -->
+            <a-entity 
+                gltf-model="#model" 
+                position="0 0 -0.5" 
+                rotation="0 180 0" 
+                scale="0.05 0.05 0.05" 
+                mindar-face-target="anchorIndex: 1;">
+            </a-entity>
+
+            <!-- Camera setup for AR -->
+            <a-camera active="false" position="0 0 0" mindar-face
